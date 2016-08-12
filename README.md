@@ -26,11 +26,13 @@ Go runs a simple web application which is running on port 8484. Consul runs vari
 
   b. Create private & public key:
 
-     openssl genrsa -out /keys/server.pem 2048
+     mkdir keys && cd keys
+
+     openssl genrsa -out server.pem 2048
 
      chmod 0600 server.pem
 
-     ssh-keygen -y -f /keys/server.pem > /keys/server.pub
+     ssh-keygen -y -f server.pem > server.pub
 
 2. Run terraform from base directory:
 
